@@ -61,7 +61,7 @@ router.post('/',
 
             //Creating a user
             user = new User({//instance we created from the model
-                name,
+                name,//name: name, 
                 email,
                 avatar,
                 password

@@ -47,7 +47,7 @@ router.get('/', auth, async (req, res) => {//callback method
             return res.status(400).json({msg: 'Invalid credentials'})
         }
         
-        //matching email with password
+        //matching input password with password we got from user li f get li lfoq 
         const isMatch = await bcrypt.compare(password, user.password)
 
         if( !isMatch ){
@@ -60,7 +60,7 @@ router.get('/', auth, async (req, res) => {//callback method
                 id: user.id
             }
         };
-
+        //return token
         jwt.sign(
             payload,
             config.get('jwtSecret'),
